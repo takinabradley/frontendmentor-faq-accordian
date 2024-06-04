@@ -2,6 +2,18 @@ import H from "./H"
 import styles from "./FAQPage.module.css"
 
 export default function FAQPage({FAQs = [], headingLevelStart = 1, children}) {
+  const onClick = e => {
+    e.preventDefault();
+    if (e.currentTarget.open) {
+      e.currentTarget.removeAttribute('open')
+    } else {
+      [...e.currentTarget.parentElement.children].forEach(elem => elem.removeAttribute('open'))
+      e.currentTarget.setAttribute('open', '')
+    }
+
+    
+  }
+
   return (
     <div className={styles["FAQPage"]}>
       <H level={headingLevelStart} className={styles["heading"]}>FAQs</H>
@@ -10,9 +22,9 @@ export default function FAQPage({FAQs = [], headingLevelStart = 1, children}) {
         {children}
       </div>
       
-      <div className={styles["faqs"]}>
+      <div className={styles["faqs"]} >
         {FAQs.map(FAQ => 
-          <details key={FAQ.question} name='FAQ' className={styles["faq"]}>
+          <details key={FAQ.question} name='FAQ' className={styles["faq"]} onClick={onClick}>
             <summary className={styles["faqQuestion"]}>
               <H level={headingLevelStart + 1} className={styles["faqQuestionHeading"]}>
                 {FAQ.question}
