@@ -53,10 +53,10 @@ function App() {
       </main>
       
       
-      <div className="attribution">
+      <footer className="attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
         Coded by <a href="https://github.com/takinabradley">takinabradley</a>.
-      </div>
+      </footer>
     </div>
   )
 }
