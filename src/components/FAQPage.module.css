@@ -1,0 +1,84 @@
+.FAQPage {
+  background-color: white;
+  padding: 1em;
+  margin: 1em; /* temporary */
+  color: var(--primary-text);
+  border-radius: 10px;
+  font-family: "Work Sans";
+}
+
+.heading {
+  display: flex;
+  gap: .5em;
+  color: var(--primary-heading);
+  font-weight: var(--fw-700);
+}
+
+.heading::before {
+  content: " ";
+  width: 1em;
+  display: block;
+  background-image: url(../assets/images/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1em 1em;
+}
+
+.faqs {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.faq {
+  padding: 1em 0;
+}
+
+.faq:not(:last-child) {
+  border-bottom: 1px solid gainsboro;
+}
+
+.faqQuestion {
+  list-style-type: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2em;
+}
+
+.faqQuestion :first-child {
+  color: var(--primary-heading);
+  display: inline;
+}
+
+.faqQuestion::after {
+  flex: 0 0 2em;
+  content: "";
+  width: 2em;
+  height: 2em;
+  background-image: url(../assets/images/icon-plus.svg);
+  background-repeat: no-repeat;
+}
+
+.faqQuestionHeading {
+  font-size: var(--fs-600);
+  font-weight: var(--fw-600);
+}
+
+.faqQuestionHeading:hover {
+  color: var(--primary-accent);
+}
+
+.faq[open] .faqQuestion::after {
+  content: "";
+  width: 2em;
+  height: 2em;
+  background-image: url(../assets/images/icon-minus.svg);
+  background-repeat: no-repeat;
+}
+
+.faqAnswer {
+  font-weight: var(--fw-400);
+}
+

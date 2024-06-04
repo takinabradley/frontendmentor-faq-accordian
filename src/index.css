@@ -1,0 +1,39 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --light-pink: hsl(275, 100%, 97%);
+  --grayish-purple: hsl(292, 16%, 49%);
+  --dark-purple: hsl(292, 42%, 14%);
+
+  --primary-heading: var(--dark-purple);
+  --primary-text: var(--grayish-purple);
+  --primary-accent: purple;
+  --background-color: var(--light-pink);
+  --foreground-color: var(--white);
+
+  --fs-500: 1rem;
+  --fs-600: 1.125rem;
+
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+body {
+  margin: 0;
+  background-image: url(./assets/images/background-pattern-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-color: var(--background-color);
+}
+
+@media (min-width: 375px) {
+  body {
+    background-image: url(./assets/images/background-pattern-desktop.svg);
+  }
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf) format("truetype");
+}
+
