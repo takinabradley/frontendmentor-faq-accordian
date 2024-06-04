@@ -15,4 +15,5 @@
 
 .main > * {
   max-width: 630px;
+  padding: 2em;
 }
